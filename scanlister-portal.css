@@ -1,6 +1,8 @@
 /* ScanLister brand colors for the Freemius Customer Portal */
 /* Royal blue #0142A5, light blue tints, no purple */
-html:root {
+
+/* Applied to every element so Freemius's own settings can't override them */
+html:root, html body, html body * {
   /* Main brand color: buttons, links, highlights */
   --fs-ds-theme-primary: #0142A5 !important;
   --fs-ds-theme-primary-button-background: #0142A5 !important;
@@ -23,4 +25,11 @@ html:root {
   /* Light gray chips and code boxes (were lavender gray) */
   --fs-ds-theme-chip-default: #E6EBF2 !important;
   --fs-ds-theme-inline-code-background: #E6EBF2 !important;
+}
+
+/* Backup: paint the page background directly */
+html body,
+html body .mat-drawer-container,
+html body .mat-sidenav-container {
+  background-color: #F3F6FB !important;
 }
